@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <canvas id="canvas" width="500" height="500" style="border: 1px solid #ff0000"></canvas>
+    </body>
+</html>
+
+<script>
+    var a = document.getElementById("canvas").getContext("2d");
+    //~~~~~~~~~~~~~~~~~~~pic1~~~~~~~~~~~~~~~~~~
+    function draw1(){
+        a.save();
+        a.translate(20,30);
+        a.beginPath();
+        a.fillStyle = "blue";
+        a.moveTo(0,0);
+        a.lineTo(20,3);
+        a.quadraticCurveTo(95,-50,170,3);
+        a.lineTo(190,0);
+        a.lineTo(200,40);
+        a.lineTo(-10,40);
+        a.closePath();
+        a.fill();
+        a.fillStyle = "gray";
+        a.fillRect(20,40,150,200);
+        a.restore();
+    }
+draw1();
+    //~~~~~~~~~~~~~~~~~~~pic2~~~~~~~~~~~~~~~~~~
+    function draw2(){
+        a.save();
+        a.beginPath();
+        a.fillStyle = "red";
+        a.moveTo(114,21);
+        a.lineTo(36,100);
+        a.lineTo(193,100);
+        a.fill();
+        a.beginPath();
+        a.fillStyle = "blue";
+        a.moveTo(75,100);
+        a.lineTo(155,100);
+        a.lineTo(213,160);
+        a.lineTo(16,160);
+        a.fill();
+        a.beginPath();
+        a.fillStyle = "green";
+        a.fillRect(85,160,60,100);
+        a.fill();
+        a.restore();
+    }
+//draw2();
+    //~~~~~~~~~~~~~~~~~~~pic3~~~~~~~~~~~~~~~~~~
+    function draw3(){
+        a.save();
+        a.beginPath();
+        a.fillStyle = "yellow";
+        a.fillRect(110,25,40,40);
+        a.beginPath();
+        a.fillStyle = "red";
+        a.moveTo(70,65);
+        a.lineTo(310,65);
+        a.lineTo(368,133);
+        a.lineTo(11,133);
+        a.fill();
+        a.beginPath();
+        a.fillStyle = "green";
+        a.fillRect(70,133,240,140);
+        a.beginPath();
+        a.fillStyle = "blue";
+        a.fillRect(230,195,40,78);
+        a.restore();
+    }
+//draw3();
+    //~~~~~~~~~~~~~~~~~~~pic4~~~~~~~~~~~~~~~~~~
+    function draw4(){
+        a.save();
+        a.beginPath();
+        a.fillStyle = "blue";
+        a.fillRect(200,23,200,100);
+        a.beginPath();
+        a.fillStyle = "red";
+        a.moveTo(80,23);
+        a.lineTo(22,190);
+        a.lineTo(377,190);
+        a.lineTo(319,123);
+        a.lineTo(80,123);
+        a.lineTo(80,23);
+        a.fill();
+        a.restore();
+    }
+//draw4();
+    //~~~~~~~~~~~~~~~~~~~pic5~~~~~~~~~~~~~~~~~~
+    function draw5(){
+        a.save();
+        a.beginPath();
+        a.fillStyle = "red";
+        a.fillRect(10,17,300,100);
+        a.beginPath();
+        a.fillStyle = "blue";
+        a.arc(70,142,25,0,Math.PI*2);
+        a.fill();
+        a.beginPath();
+        a.fillStyle = "green";
+        a.arc(250,142,25,0,Math.PI*2);
+        a.fill();
+        a.restore();
+    }
+//draw5();
+    //~~~~~~~~~~~~~~~~~~~pic6~~~~~~~~~~~~~~~~~~
+    function draw6(){
+        a.save();
+        a.beginPath();
+        a.fillStyle = "yellow";
+        a.arc(121,52,42,0,Math.PI*2);
+        a.fill();
+        a.beginPath();
+        a.fillStyle = "blue";
+        a.fillRect(60,94,120,160);
+        a.beginPath();
+        a.fillStyle = "red";
+        a.fillRect(19,132,22,100);
+        a.beginPath();
+        a.fillStyle = "red";
+        a.fillRect(200,132,22,100);
+        a.beginPath();
+        a.fillStyle = "green";
+        a.fillRect(90,254,20,70);
+        a.beginPath();
+        a.fillStyle = "green";
+        a.fillRect(132,254,20,70);
+        a.restore();
+    }
+//draw6();
+
+</script>

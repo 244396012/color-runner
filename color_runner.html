@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Color Runner</title>
+        <link rel="stylesheet" href="css/main.css"/>
+    </head>
+    <body>
+        <audio src="music/beginmusic.mp3" autoplay="autoplay" loop="loop">
+            浏览器不支持audio标签~~~
+        </audio>
+        <div class="all">
+<!--===========ready页面==============-->
+            <div id="ready_page" class="show">
+                <div class="ready_logo"></div>
+                <div class="ready_bgimg"></div>
+                <div class="ready_runner"></div>
+                <div class="ready_btn" onclick="showTools()"></div>
+                <p class="ready_member">开发人员：未知</p>
+            </div>
+<!--===========tools页面==============-->
+            <div id="game_tools" class="hide">
+                <div class="title">
+                    <h1>游戏道具</h1>
+                </div>
+                <div class="tools">
+                    <h3>金币：<span id="moneyNum">2000</span></h3>
+                    <div class="tools_choice" id="jzz">
+                        <div class="point"></div>
+                        <img style="left: 6px;top:10px;" src="images/jjz.png" alt=""/>
+                    </div>
+                    <div class="tools_choice" id="jsyx">
+                        <div class="point"></div>
+                        <img style="left: 6px;top:6px;" src="images/slow.png" alt=""/>
+                    </div>
+                    <div class="start_btn" onclick="showMain()"></div>
+                </div>
+            </div>
+<!--=====================游戏界面====================-->
+            <div id="game_main" class="hide">
+                <div onclick="gameStop()" id="stop" style="cursor: pointer;border-radius: 40px;left:30px;top:30px;position: absolute;width: 40px;height: 40px;z-index: 10;border: 6px solid #000000">
+                    <div id="stop1">
+                        <div style="float: left;margin-top: 10px;margin-left: 9px;width: 0;height: 15px;border: 3px solid #000000"></div>
+                        <div style="float: left;width: 0;margin-top: 10px;margin-left: 9px;height: 15px;border: 3px solid #000000;"></div>
+                    </div>
+                    <div id="stop2">
+                        <div></div>
+                    </div>
+                </div>
+                <canvas id="bg_canvas" width="1000" height="600"></canvas>
+                <canvas id="role_canvas" width="1000" height="600"></canvas>
+                <img id="pop_man" src="images/man.gif" alt=""/>
+                <div class="main_runner"></div>
+                <div class="main_runner1"></div>
+                <ul id="bullet"></ul>
+            </div>
+<!--================游戏结束=================-->
+            <div id="game_over" class="hide">
+                <div class="top">
+                    <br/>
+                    手速不行就不要玩这个游戏了~~~
+                    <div class="tri"></div>
+                </div>
+                <div class="bottom">
+                    <div class="name_tip">Your Name</div>
+                    <div class="name">
+                        <input type="text" id="writeName" placeholder="请输入名字"/>
+                    </div>
+                    <div id="addName" onclick="rank()">-></div>
+                </div>
+            </div>
+<!--===================游戏排行榜=================-->
+            <div id="game_scores" class="hide">
+                <div class="left">
+                    <div class="score_tip">Top Scores</div>
+                    <div style="height: 5px;background-color: #47c8b1"></div>
+                    <div class="left_ranking"></div>
+                </div>
+                <div class="right">
+                    <div class="right_bg">GAME RESULT</div>
+                    <div class="result_info">
+                        <div class="info1">&nbsp;
+                            得分:<span id="scores" style="text-align: center;display: inline-block;width: 100px;">0</span><span style="color: #75aac8;font-size: 30px">&nbsp;|</span>
+                            颜色:<span id="colors" style="text-align: center;display: inline-block;width: 120px;color: #13709c">0</span></div>
+                        <div class="info2">&nbsp;
+                            奖励:<span id="reward" style="text-align: center;display: inline-block;width: 100px;;">0</span><span style="color: #75aac8;font-size: 30px">&nbsp;|</span>
+                            金币:<span id="coin" style="text-align: center;display: inline-block;width: 120px;color: #b0263e">0</span></div>
+                        <div class="info3">&nbsp;
+                            总分:<span id="total_scores" style="color: #f5e374;text-align: right;display: inline-block;width: 283px;">0</span></div>
+                        <div class="info4">&nbsp;
+                            最高分:<span id="max_scores" style="color: #b05f7b;text-align: right;display: inline-block;width: 265px;">0</span></div>
+                        <div class="info5">&nbsp;
+                            我的金币:<span id="my_coins" style="color: #b05f7b;text-align: center;display: inline-block;width: 60px;">0</span><span style="color: #75aac8;font-size: 30px">&nbsp;|</span>
+                            本局排名:<span id="rankings" style="color: #b05f7b;text-align: center;display: inline-block;width: 80px;">0</span></div>
+                    </div>
+                    <div class="restart">
+                        <div id="homepage" onclick="homepage()"></div>
+                        <div id="restart" onclick="reStart()"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/class.js"></script>
+<script type="text/javascript" src="js/game.js"></script>
