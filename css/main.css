@@ -34,10 +34,10 @@
 @-moz-keyframes bgimg {from{background-position: 0 0}to{background-position: -1920px 0}}
 @-webkit-keyframes bgimg {from{background-position: 0 0}to{background-position: -1920px 0}}
 .ready_runner{
-    width: 272px;
-    height: 236px;
+    width: 118px;
+    height: 190px;
     background-image: url("../images/man.gif");
-    margin: -230px auto 0 auto;
+    margin: -190px auto 0 auto;
 }
 .ready_btn{
     width: 133px;
